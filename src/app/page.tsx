@@ -1,113 +1,148 @@
-import Image from 'next/image'
+"use client";
+
+import Image from "next/image";
+import LogoSymbol from "/public/assets/images/logo-symbol.svg";
+import LogoText from "/public/assets/images/logo-text.svg";
+import MailIcon from "/public/assets/images/mail-icon.svg";
+import GooglePlay from "/public/assets/images/google-play.png";
+import ScreeningTest from "/public/assets/images/screening-test.png";
+import Game1 from "/public/assets/images/game1.png";
+import Game2 from "/public/assets/images/game2.png";
+import CustomGame1 from "/public/assets/images/custom-game1.png";
+import CustomGame2 from "/public/assets/images/custom-game2.png";
+import { useEffect, useState } from "react";
 
 export default function Home() {
+  const [viewportHeight, setViewportHeight] = useState(window.innerHeight);
+
+  useEffect(() => {
+    const updateViewportHeight = () => {
+      setViewportHeight(window.innerHeight);
+    };
+
+    window.addEventListener("resize", updateViewportHeight);
+
+    return () => {
+      window.removeEventListener("resize", updateViewportHeight);
+    };
+  }, []);
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main className="flex min-h-screen flex-col items-center justify-between font-pretendard-regular">
+      <header className="flex justify-between w-full fixed z-10 md:px-24 px-7 md:py-[69px] py-[43px]">
+        <div className="flex gap-2">
+          <Image className="md:w-[90px] w-[40px]" alt="" src={LogoSymbol} />
+          <Image className="md:w-[190px] w-[120px]" alt="" src={LogoText} />
         </div>
-      </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
+        <Image className="md:w-[40px] w-[30px]" alt="" src={MailIcon} />
+      </header>
+      <section
+        className="flex flex-col bg-senior w-full bg-no-repeat bg-center bg-cover
+        md:px-24 px-7 md:py-[200px] py-[178px] text-white md:gap-[55px] gap-[200px]"
+        style={{ height: `${viewportHeight}px` }}
+      >
+        <div className="flex flex-col md:text-6xl text-4xl md:gap-3 gap-2 font-pretendard-bold text-right">
+          <span>치매 예방</span>
+          <span>두뇌 훈련</span>
+          <span>경도인지장애 케어</span>
+        </div>
+        <div className="flex flex-col md:text-3xl text-1xl gap-2 font-pretendard-medium md:items-end items-center">
+          <span className="text-[20px]">앱 다운로드</span>
+          <button className="bg-white w-[233px] py-[14px] px-[33px] rounded-[100px]">
+            <Image className="w-[167px]" alt="" src={GooglePlay} />
+          </button>
+        </div>
+      </section>
+      <section
+        className="flex items-center justify-center md:flex-row md:justify-between flex-col w-full md:px-24 px-7 bg-orange-50 gap-5"
+        style={{ height: `${viewportHeight}px` }}
+      >
         <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
+          className="lg:w-[500px] md:w-[360px] w-[250px]"
+          alt=""
+          src={ScreeningTest}
         />
-      </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
+        <div
+          className="flex flex-col gap-6 lg:text-6xl md:text-5xl text-4xl font-pretendard-bold
+        break-keep md:text-right text-center"
         >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
+          <div className="flex flex-col gap-2">
+            <span>한 달에 한 번</span>
+            <span>CIST</span>
+            <span>인지선별검사</span>
+          </div>
+          <span className="text-xs font-pretendard-regular">
+            매달 주기적으로 나의 인지능력 상태를 확인해요.
+          </span>
+        </div>
+      </section>
+      <section
+        className="flex items-center justify-center md:flex-row md:justify-between flex-col w-full md:px-24 px-7 bg-orange-100 gap-5"
+        style={{ height: `${viewportHeight}px` }}
+      >
+        <div className="flex flex-col gap-3 md:w-[360px] w-[250px]">
+          <Image className="w-full" alt="" src={Game1} />
+          <Image className="w-full" alt="" src={Game2} />
+        </div>
+        <div className="flex flex-col gap-6 lg:text-6xl md:text-5xl text-4xl font-pretendard-bold break-keep md:text-right text-center">
+          <div className="flex flex-col gap-2">
+            <span>식후 30분</span>
+            <span>두뇌비타민</span>
+          </div>
+          <span className="text-xs font-pretendard-regular">
+            40여종의 다양한 인지향상 게임을 즐겨요.
+          </span>
+        </div>
+      </section>
+      <section
+        className="flex items-center justify-center md:flex-row md:justify-between flex-col w-full md:px-24 px-7 bg-orange-200 gap-5"
+        style={{ height: `${viewportHeight}px` }}
+      >
+        <div className="flex gap-3">
+          <Image
+            className="lg:w-[500px] md:w-[360px] w-[250px]"
+            alt=""
+            src={CustomGame1}
+          />
+          <Image
+            className="lg:w-[240px] md:w-[200px] w-[100px]"
+            alt=""
+            src={CustomGame2}
+          />
+        </div>
+        <div
+          className="flex flex-col gap-6 lg:text-6xl md:text-5xl text-4xl font-pretendard-bold
+        break-keep md:text-right text-center"
         >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
+          <div className="flex flex-col gap-2">
+            <span>하루에 하나</span>
+            <span>우리가족</span>
+            <span>비타민</span>
+          </div>
+          <span className="text-xs font-pretendard-regular">
+            우리 가족만의 문제를 만들고 풀어보아요
+          </span>
+        </div>
+      </section>
+      <footer
+        className="flex flex-col justify-end"
+        style={{ height: `${viewportHeight}px` }}
+      >
+        <div className="flex flex-col gap-5">
+          <div className="flex gap-3">
+            <span>이용약관</span>
+            <span className="font-pretendard-bold">개인정보처리방침</span>
+          </div>
+          <div className="flex flex-col gap-3">
+            <span>(주)GGS</span>
+            <span>
+              서울특별시 강남구 테헤란로 311 아남타워빌딩 7층 (우편번호 : 06151)
             </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+            <span>TEL : </span>
+            <span>MAIL : </span>
+          </div>
+        </div>
+      </footer>
     </main>
-  )
+  );
 }
