@@ -13,9 +13,11 @@ import CustomGame2 from "/public/assets/images/custom-game2.png";
 import { useEffect, useState } from "react";
 
 export default function Home() {
-  const [viewportHeight, setViewportHeight] = useState(window.innerHeight);
+  const [viewportHeight, setViewportHeight] = useState(0);
 
   useEffect(() => {
+    setViewportHeight(window.innerHeight);
+
     const updateViewportHeight = () => {
       setViewportHeight(window.innerHeight);
     };
@@ -68,8 +70,7 @@ export default function Home() {
         >
           <div className="flex flex-col gap-2">
             <span>한 달에 한 번</span>
-            <span>CIST</span>
-            <span>인지선별검사</span>
+            <span>CIST 인지선별검사</span>
           </div>
           <span className="text-xs font-pretendard-regular">
             매달 주기적으로 나의 인지능력 상태를 확인해요.
@@ -116,8 +117,7 @@ export default function Home() {
         >
           <div className="flex flex-col gap-2">
             <span>하루에 하나</span>
-            <span>우리가족</span>
-            <span>비타민</span>
+            <span>우리가족 비타민</span>
           </div>
           <span className="text-xs font-pretendard-regular">
             우리 가족만의 문제를 만들고 풀어보아요
