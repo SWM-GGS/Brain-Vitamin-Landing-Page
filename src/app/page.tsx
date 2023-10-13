@@ -32,10 +32,12 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between font-pretendard-regular">
       <header className="flex justify-between items-center w-full fixed z-10 lg:px-48 md:px-24 px-7 md:py-[69px] py-[43px]">
-        <div className="flex gap-2">
-          <Image className="md:w-[90px] w-[40px]" alt="" src={LogoSymbol} />
-          <Image className="md:w-[190px] w-[120px]" alt="" src={LogoText} />
-        </div>
+        <a href="#top">
+          <div className="flex gap-2">
+            <Image className="md:w-[90px] w-[40px]" alt="" src={LogoSymbol} />
+            <Image className="md:w-[190px] w-[120px]" alt="" src={LogoText} />
+          </div>
+        </a>
         <a href="mailto:lkjdee0329@gmail.com">
           <Image
             className="md:w-[40px] w-[30px]"
@@ -48,6 +50,7 @@ export default function Home() {
         className="flex flex-col bg-senior w-full bg-no-repeat bg-center bg-cover
         lg:px-48 md:px-24 px-7 md:py-[200px] py-[178px] text-white md:gap-[55px] gap-[200px]"
         style={{ height: `${viewportHeight}px` }}
+        id="top"
       >
         <div className="flex flex-col md:text-6xl text-4xl md:gap-3 gap-2 font-pretendard-bold text-right">
           <span>치매 예방</span>
@@ -82,7 +85,7 @@ export default function Home() {
         >
           <div className="flex flex-col md:gap-3 gap-2">
             <span>한 달에 한 번</span>
-            <span>CIST 인지선별검사</span>
+            <span>인지선별검사</span>
           </div>
           <span className="text-xs font-pretendard-regular">
             매달 주기적으로 나의 인지능력 상태를 확인해요.
