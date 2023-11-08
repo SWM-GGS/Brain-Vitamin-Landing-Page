@@ -10,7 +10,9 @@ import Game1 from "/public/assets/images/game1.png";
 import Game2 from "/public/assets/images/game2.png";
 import CustomGame1 from "/public/assets/images/custom-game1.png";
 import DownloadIcon from "/public/assets/images/download-icon.svg";
+import ChevronRight from "/public/assets/images/chevron-right.svg";
 import { useEffect, useState } from "react";
+import Link from "next/link";
 
 export default function Home() {
   const [viewportHeight, setViewportHeight] = useState(0);
@@ -138,12 +140,35 @@ export default function Home() {
         className="flex flex-col justify-between w-full lg:px-48 md:px-24 px-7 md:pt-[200px] pt-[178px] md:pb-20 pb-8 text-sm"
         style={{ height: `${viewportHeight}px` }}
       >
-        <div className="flex flex-col md:gap-5 gap-16 md:items-start items-center">
+        <div className="flex md:flex-row flex-col md:justify-between gap-8">
           <div className="flex flex-col md:text-6xl text-4xl md:gap-3 gap-2 font-pretendard-bold self-start">
             <span>우리가족</span>
             <span>연결고리</span>
             <span>두뇌비타민</span>
           </div>
+          <div className="flex flex-col items-center justify-center md:gap-4 gap-2 font-pretendard-medium">
+            <span className="md:text-2xl text-1xl">
+              내 인지상태가 궁금하다면?
+            </span>
+            <Link
+              href="/mciTest"
+              className="flex items-center gap-2 md:text-4xl text-2xl"
+            >
+              <span>
+                <span className="text-[#FF9432] font-pretendard-bold">
+                  자가진단
+                </span>{" "}
+                하러가기
+              </span>
+              <Image
+                className="lg:w-[30px] md:w-[30px] w-[20px]"
+                alt=""
+                src={ChevronRight}
+              />
+            </Link>
+          </div>
+        </div>
+        <div className="flex flex-col md:gap-5 gap-16 md:items-start items-center">
           <a
             href="https://play.google.com/store/apps/details?id=com.brainvitamin"
             target="_blank"
