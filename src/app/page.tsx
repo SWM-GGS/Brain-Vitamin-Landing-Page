@@ -33,11 +33,21 @@ export default function Home() {
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between font-pretendard-regular">
-      <header className="flex justify-between items-center w-full fixed z-10 lg:px-48 md:px-24 px-7 md:py-[69px] py-[43px]">
+      <header className="flex justify-between items-center w-full fixed z-10 lg:px-60 md:px-24 px-7 md:py-[69px] py-[43px]">
         <a href="#top">
           <div className="flex gap-2">
-            <Image className="md:w-[90px] w-[40px]" alt="" src={LogoSymbol} />
-            <Image className="md:w-[190px] w-[120px]" alt="" src={LogoText} />
+            <Image
+              className="md:w-[90px] w-[40px]"
+              alt=""
+              src={LogoSymbol}
+              priority
+            />
+            <Image
+              className="md:w-[190px] w-[120px]"
+              alt=""
+              src={LogoText}
+              priority
+            />
           </div>
         </a>
         <a href="mailto:lkjdee0329@gmail.com">
@@ -45,12 +55,13 @@ export default function Home() {
             className="md:w-[40px] w-[30px]"
             alt="이메일로 문의하기"
             src={MailIcon}
+            priority
           />
         </a>
       </header>
       <section
         className="flex flex-col bg-senior w-full bg-no-repeat bg-center bg-cover
-        lg:px-48 md:px-24 px-7 md:py-[200px] py-[178px] text-white md:gap-[55px] gap-[200px]"
+        lg:px-60 md:px-24 px-7 md:py-[200px] py-[178px] text-white md:gap-[55px] gap-[200px]"
         style={{ height: `${viewportHeight}px` }}
         id="top"
       >
@@ -65,21 +76,30 @@ export default function Home() {
             href="https://play.google.com/store/apps/details?id=com.brainvitamin"
             target="_blank"
           >
-            <button className="bg-white w-[233px] py-[14px] px-[33px] rounded-[100px]">
-              <Image className="w-[167px]" alt="" src={GooglePlay} />
+            <button
+              className="bg-white w-[233px] py-[14px] px-[33px] rounded-[100px]"
+              type="button"
+            >
+              <Image
+                className="w-[167px]"
+                alt="구글 플레이 앱 다운로드"
+                src={GooglePlay}
+                priority
+              />
             </button>
           </a>
         </div>
       </section>
       <section
         className="flex items-center justify-center md:flex-row md:justify-between flex-col w-full
-        lg:px-48 md:px-24 px-7 bg-orange-50 gap-5"
+        lg:px-60 md:px-24 px-7 bg-orange-50 gap-5"
         style={{ height: `${viewportHeight}px` }}
       >
         <Image
           className="lg:w-[500px] md:w-[360px] w-[250px]"
           alt=""
           src={ScreeningTest}
+          loading="lazy"
         />
         <div
           className="flex flex-col gap-6 lg:text-6xl md:text-5xl text-4xl font-pretendard-bold
@@ -96,12 +116,12 @@ export default function Home() {
       </section>
       <section
         className="flex items-center justify-center md:flex-row md:justify-between flex-col w-full
-        lg:px-48 md:px-24 px-7 bg-orange-100 gap-5"
+        lg:px-60 md:px-24 px-7 bg-orange-100 gap-5"
         style={{ height: `${viewportHeight}px` }}
       >
         <div className="flex flex-col gap-3 md:w-[360px] w-[250px]">
-          <Image className="w-full" alt="" src={Game1} />
-          <Image className="w-full" alt="" src={Game2} />
+          <Image className="w-full" alt="" src={Game1} loading="lazy" />
+          <Image className="w-full" alt="" src={Game2} loading="lazy" />
         </div>
         <div className="flex flex-col gap-6 lg:text-6xl md:text-5xl text-4xl font-pretendard-bold break-keep md:text-right text-center">
           <div className="flex flex-col md:gap-3 gap-2">
@@ -115,13 +135,14 @@ export default function Home() {
       </section>
       <section
         className="flex items-center justify-center md:flex-row md:justify-between flex-col w-full
-        lg:px-48 md:px-24 px-7 bg-orange-200 gap-5"
+        lg:px-60 md:px-24 px-7 bg-orange-200 gap-5"
         style={{ height: `${viewportHeight}px` }}
       >
         <Image
           className="lg:w-[500px] md:w-[360px] w-[250px]"
           alt=""
           src={CustomGame1}
+          loading="lazy"
         />
         <div
           className="flex flex-col gap-6 lg:text-6xl md:text-5xl text-4xl font-pretendard-bold
@@ -137,7 +158,7 @@ export default function Home() {
         </div>
       </section>
       <footer
-        className="flex flex-col justify-between w-full lg:px-48 md:px-24 px-7 md:pt-[200px] pt-[178px] md:pb-20 pb-8 text-sm"
+        className="flex flex-col justify-between w-full lg:px-60 md:px-24 px-7 md:pt-[200px] pt-[178px] md:pb-20 pb-8 text-sm"
         style={{ height: `${viewportHeight}px` }}
       >
         <div className="flex md:flex-row flex-col md:justify-between gap-8">
@@ -173,9 +194,16 @@ export default function Home() {
             href="https://play.google.com/store/apps/details?id=com.brainvitamin"
             target="_blank"
           >
-            <button className="flex items-center gap-1 bg-[#FF9432] py-[16px] px-[30px] rounded-[100px] text-xl text-white w-[180px]">
+            <button
+              className="flex items-center gap-1 bg-[#FF9432] py-[16px] px-[30px] rounded-[100px] text-xl text-white w-[180px]"
+              type="button"
+            >
               <span>앱 다운로드</span>
-              <Image className="w-[20px]" alt="" src={DownloadIcon} />
+              <Image
+                className="w-[20px]"
+                alt="구글 플레이 앱 다운로드"
+                src={DownloadIcon}
+              />
             </button>
           </a>
         </div>

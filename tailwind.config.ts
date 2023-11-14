@@ -13,7 +13,7 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
         senior:
-          "linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50)), url('/assets/images/senior-doing-tablet.jpg')",
+          "linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50)), url('/assets/images/senior-doing-tablet.avif')",
       },
       fontFamily: {
         "pretendard-regular": "Pretendard-Regular",
