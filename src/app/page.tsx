@@ -65,8 +65,15 @@ export default function Home() {
             href="https://play.google.com/store/apps/details?id=com.brainvitamin"
             target="_blank"
           >
-            <button className="bg-white w-[233px] py-[14px] px-[33px] rounded-[100px]">
-              <Image className="w-[167px]" alt="" src={GooglePlay} />
+            <button
+              className="bg-white w-[233px] py-[14px] px-[33px] rounded-[100px]"
+              type="button"
+            >
+              <Image
+                className="w-[167px]"
+                alt="구글 플레이 앱 다운로드"
+                src={GooglePlay}
+              />
             </button>
           </a>
         </div>
@@ -173,9 +180,16 @@ export default function Home() {
             href="https://play.google.com/store/apps/details?id=com.brainvitamin"
             target="_blank"
           >
-            <button className="flex items-center gap-1 bg-[#FF9432] py-[16px] px-[30px] rounded-[100px] text-xl text-white w-[180px]">
+            <button
+              className="flex items-center gap-1 bg-[#FF9432] py-[16px] px-[30px] rounded-[100px] text-xl text-white w-[180px]"
+              type="button"
+            >
               <span>앱 다운로드</span>
-              <Image className="w-[20px]" alt="" src={DownloadIcon} />
+              <Image
+                className="w-[20px]"
+                alt="구글 플레이 앱 다운로드"
+                src={DownloadIcon}
+              />
             </button>
           </a>
         </div>
