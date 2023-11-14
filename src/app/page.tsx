@@ -33,7 +33,7 @@ export default function Home() {
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between font-pretendard-regular">
-      <header className="flex justify-between items-center w-full fixed z-10 lg:px-48 md:px-24 px-7 md:py-[69px] py-[43px]">
+      <header className="flex justify-between items-center w-full fixed z-10 lg:px-60 md:px-24 px-7 md:py-[69px] py-[43px]">
         <a href="#top">
           <div className="flex gap-2">
             <Image className="md:w-[90px] w-[40px]" alt="" src={LogoSymbol} />
@@ -50,7 +50,7 @@ export default function Home() {
       </header>
       <section
         className="flex flex-col bg-senior w-full bg-no-repeat bg-center bg-cover
-        lg:px-48 md:px-24 px-7 md:py-[200px] py-[178px] text-white md:gap-[55px] gap-[200px]"
+        lg:px-60 md:px-24 px-7 md:py-[200px] py-[178px] text-white md:gap-[55px] gap-[200px]"
         style={{ height: `${viewportHeight}px` }}
         id="top"
       >
@@ -73,7 +73,7 @@ export default function Home() {
       </section>
       <section
         className="flex items-center justify-center md:flex-row md:justify-between flex-col w-full
-        lg:px-48 md:px-24 px-7 bg-orange-50 gap-5"
+        lg:px-60 md:px-24 px-7 bg-orange-50 gap-5"
         style={{ height: `${viewportHeight}px` }}
       >
         <Image
@@ -96,7 +96,7 @@ export default function Home() {
       </section>
       <section
         className="flex items-center justify-center md:flex-row md:justify-between flex-col w-full
-        lg:px-48 md:px-24 px-7 bg-orange-100 gap-5"
+        lg:px-60 md:px-24 px-7 bg-orange-100 gap-5"
         style={{ height: `${viewportHeight}px` }}
       >
         <div className="flex flex-col gap-3 md:w-[360px] w-[250px]">
@@ -115,7 +115,7 @@ export default function Home() {
       </section>
       <section
         className="flex items-center justify-center md:flex-row md:justify-between flex-col w-full
-        lg:px-48 md:px-24 px-7 bg-orange-200 gap-5"
+        lg:px-60 md:px-24 px-7 bg-orange-200 gap-5"
         style={{ height: `${viewportHeight}px` }}
       >
         <Image
@@ -137,7 +137,7 @@ export default function Home() {
         </div>
       </section>
       <footer
-        className="flex flex-col justify-between w-full lg:px-48 md:px-24 px-7 md:pt-[200px] pt-[178px] md:pb-20 pb-8 text-sm"
+        className="flex flex-col justify-between w-full lg:px-60 md:px-24 px-7 md:pt-[200px] pt-[178px] md:pb-20 pb-8 text-sm"
         style={{ height: `${viewportHeight}px` }}
       >
         <div className="flex md:flex-row flex-col md:justify-between gap-8">
