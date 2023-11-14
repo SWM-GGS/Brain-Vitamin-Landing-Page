@@ -36,8 +36,18 @@ export default function Home() {
       <header className="flex justify-between items-center w-full fixed z-10 lg:px-60 md:px-24 px-7 md:py-[69px] py-[43px]">
         <a href="#top">
           <div className="flex gap-2">
-            <Image className="md:w-[90px] w-[40px]" alt="" src={LogoSymbol} />
-            <Image className="md:w-[190px] w-[120px]" alt="" src={LogoText} />
+            <Image
+              className="md:w-[90px] w-[40px]"
+              alt=""
+              src={LogoSymbol}
+              priority
+            />
+            <Image
+              className="md:w-[190px] w-[120px]"
+              alt=""
+              src={LogoText}
+              priority
+            />
           </div>
         </a>
         <a href="mailto:lkjdee0329@gmail.com">
@@ -45,6 +55,7 @@ export default function Home() {
             className="md:w-[40px] w-[30px]"
             alt="이메일로 문의하기"
             src={MailIcon}
+            priority
           />
         </a>
       </header>
@@ -73,6 +84,7 @@ export default function Home() {
                 className="w-[167px]"
                 alt="구글 플레이 앱 다운로드"
                 src={GooglePlay}
+                priority
               />
             </button>
           </a>
@@ -87,6 +99,7 @@ export default function Home() {
           className="lg:w-[500px] md:w-[360px] w-[250px]"
           alt=""
           src={ScreeningTest}
+          loading="lazy"
         />
         <div
           className="flex flex-col gap-6 lg:text-6xl md:text-5xl text-4xl font-pretendard-bold
@@ -107,8 +120,8 @@ export default function Home() {
         style={{ height: `${viewportHeight}px` }}
       >
         <div className="flex flex-col gap-3 md:w-[360px] w-[250px]">
-          <Image className="w-full" alt="" src={Game1} />
-          <Image className="w-full" alt="" src={Game2} />
+          <Image className="w-full" alt="" src={Game1} loading="lazy" />
+          <Image className="w-full" alt="" src={Game2} loading="lazy" />
         </div>
         <div className="flex flex-col gap-6 lg:text-6xl md:text-5xl text-4xl font-pretendard-bold break-keep md:text-right text-center">
           <div className="flex flex-col md:gap-3 gap-2">
@@ -129,6 +142,7 @@ export default function Home() {
           className="lg:w-[500px] md:w-[360px] w-[250px]"
           alt=""
           src={CustomGame1}
+          loading="lazy"
         />
         <div
           className="flex flex-col gap-6 lg:text-6xl md:text-5xl text-4xl font-pretendard-bold
@@ -171,6 +185,7 @@ export default function Home() {
                 className="lg:w-[30px] md:w-[30px] w-[20px]"
                 alt=""
                 src={ChevronRight}
+                loading="lazy"
               />
             </Link>
           </div>
@@ -189,6 +204,7 @@ export default function Home() {
                 className="w-[20px]"
                 alt="구글 플레이 앱 다운로드"
                 src={DownloadIcon}
+                loading="lazy"
               />
             </button>
           </a>
