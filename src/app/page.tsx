@@ -185,7 +185,6 @@ export default function Home() {
                 className="lg:w-[30px] md:w-[30px] w-[20px]"
                 alt=""
                 src={ChevronRight}
-                loading="lazy"
               />
             </Link>
           </div>
@@ -204,7 +203,6 @@ export default function Home() {
                 className="w-[20px]"
                 alt="구글 플레이 앱 다운로드"
                 src={DownloadIcon}
-                loading="lazy"
               />
             </button>
           </a>
