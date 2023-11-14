@@ -30,6 +30,10 @@ export default function RootLayout({
           name="google-site-verification"
           content="4pyEhv9k7plm8lysksELbmxxFmH3IQozX7hBG1YWmcE"
         />
+        <meta
+          name="naver-site-verification"
+          content="c18a9c3a8400fbbffd7d32b8d580d1705208298d"
+        />
       </head>
       <body className={inter.className}>{children}</body>
     </html>
