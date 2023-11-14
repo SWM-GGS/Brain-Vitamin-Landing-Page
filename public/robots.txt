@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://brain-vitamin.vercel.app
+
+# Sitemaps
+Sitemap: https://brain-vitamin.vercel.app/sitemap.xml
