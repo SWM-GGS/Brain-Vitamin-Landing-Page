@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     description: "치매예방, 두뇌훈련, 경도인지장애 케어",
     url: "https://brain-vitamin.vercel.app",
     locale: "ko_KR",
-    images: "/public/assets/images/logo.png",
+    images: "/assets/images/logo.png",
   },
 };
 
